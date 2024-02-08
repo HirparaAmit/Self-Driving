@@ -13,6 +13,7 @@ rspeed = 0
 fw_ct = 0
 ri_ct = 0
 le_ct = 0
+re_ct = 0
 
 if(clientID != -1):
     print('Connected to remote API server')
@@ -48,23 +49,25 @@ try:
         if (com == ord('q')):
             break
         elif (com == ord('w')):
-            lspeed = 2
-            rspeed = 2
+            lspeed = 1
+            rspeed = 1
             cv2.imwrite(f"D:/Projects/Self-Driving/train_data/forward/fw_{fw_ct}.jpg", im)
             fw_ct += 1
         elif (com == ord('a')):
-            lspeed = -1
-            rspeed = 2
+            lspeed = -0.5
+            rspeed = 1
             cv2.imwrite(f"D:/Projects/Self-Driving/train_data/left/le_{le_ct}.jpg", im)
             le_ct += 1
         elif (com == ord('d')):
-            lspeed = 2
-            rspeed = -1
+            lspeed = 1
+            rspeed = -0.5
             cv2.imwrite(f"D:/Projects/Self-Driving/train_data/right/ri_{ri_ct}.jpg", im)
             ri_ct += 1
         elif (com == ord('s')):
-            lspeed = -2
-            rspeed = -2
+            lspeed = -1
+            rspeed = -1
+            cv2.imwrite(f"D:/Projects/Self-Driving/train_data/reverse/re_{re_ct}.jpg", im)
+            re_ct += 1
         else:
             lspeed = 0
             rspeed = 0
