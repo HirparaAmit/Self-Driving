@@ -54,18 +54,18 @@ try:
             cv2.imwrite(f"D:/Projects/Self-Driving/train_data/forward/fw_{fw_ct}.jpg", im)
             fw_ct += 1
         elif (com == ord('a')):
-            lspeed = -0.5
-            rspeed = 1
+            lspeed = -1
+            rspeed = 2
             cv2.imwrite(f"D:/Projects/Self-Driving/train_data/left/le_{le_ct}.jpg", im)
             le_ct += 1
         elif (com == ord('d')):
-            lspeed = 1
-            rspeed = -0.5
+            lspeed = 2
+            rspeed = -1
             cv2.imwrite(f"D:/Projects/Self-Driving/train_data/right/ri_{ri_ct}.jpg", im)
             ri_ct += 1
         elif (com == ord('s')):
-            lspeed = -1
-            rspeed = -1
+            lspeed = -2
+            rspeed = -2
             cv2.imwrite(f"D:/Projects/Self-Driving/train_data/reverse/re_{re_ct}.jpg", im)
             re_ct += 1
         else:

@@ -24,7 +24,7 @@ delay(1)
 returnCode, resolution, image = sim.simxGetVisionSensorImage(clientID, camera_handle, 0, sim.simx_opmode_streaming)
 delay(1)
 
-model = load_model('D:/Projects/Self-Driving/model_creation/trained_model.h5')
+model = load_model('D:/Projects/Self-Driving/model_creation/ai_car_model.h5')
 
 dict_file = open("D:/Projects/Self-Driving/model_creation/data/ai_car.pkl", "rb")
 category_dict = pickle.load(dict_file)
@@ -62,6 +62,9 @@ try:
         elif (label == 2):
             lSpeed = 1
             rSpeed = -0.5
+        # elif (label == 2):
+        #     lSpeed = -1
+        #     rSpeed = -1
         else:
             lSpeed = 0
             rSpeed = 0
