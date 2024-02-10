@@ -59,12 +59,12 @@ try:
         elif (label == 1):
             lSpeed = -0.5
             rSpeed = 1
-        elif (label == 2):
+        elif (label == 3):
             lSpeed = 1
             rSpeed = -0.5
-        # elif (label == 2):
-        #     lSpeed = -1
-        #     rSpeed = -1
+        elif (label == 2):
+            lSpeed = -1
+            rSpeed = -1
         else:
             lSpeed = 0
             rSpeed = 0
